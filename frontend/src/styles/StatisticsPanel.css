@@ -1,0 +1,121 @@
+.stats-panel {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 350px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  font-family: sans-serif;
+  overflow: hidden;
+  z-index: 999;
+}
+
+.stats-header {
+  background: #4f46e5;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+.stats-header h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.stats-tabs {
+  display: flex;
+  border-bottom: 1px solid #eee;
+}
+.stats-tabs .tab {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  background: #f5f5f5;
+  cursor: pointer;
+  font-size: 13px;
+}
+.stats-tabs .tab.active {
+  background: #e0e7ff;
+  font-weight: bold;
+}
+
+.stats-content {
+  padding: 15px;
+  max-height: 350px;
+  overflow-y: auto;
+}
+.stat-item {
+  font-size: 13px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.histogram {
+  margin-top: 15px;
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+}
+
+/* LINE CHART HISTOGRAM */
+.line-chart-container {
+  position: relative;
+  height: 120px;
+  margin: 10px 0 25px 0;
+}
+
+.line-chart {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.chart-line {
+  fill: none;
+  stroke: #4f46e5;
+  stroke-width: 2px;
+  stroke-linejoin: round;
+}
+
+.chart-area {
+  fill: rgba(79, 70, 229, 0.1);
+  stroke: none;
+}
+
+.chart-point {
+  fill: #4f46e5;
+  r: 2;
+  transition: r 0.2s ease;
+}
+
+.chart-point:hover {
+  r: 4;
+  fill: #3730a3;
+}
+
+/* Axis labels */
+.chart-axis {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  padding: 0 5px;
+}
+
+.axis-label {
+  font-size: 9px;
+  color: #000000;
+  text-align: center;
+}
+
+.axis-label:nth-child(5n+1) {
+  opacity: 1;
+}
+.axis-label:not(:nth-child(5n+1)) {
+  opacity: 1;
+}
+
+@media (max-width: 770px) {
+  .stats-panel {
+    display: none;
+  }
+}
