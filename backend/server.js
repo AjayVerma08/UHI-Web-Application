@@ -10,7 +10,7 @@ import fs from "fs";
 
 const app = express();
 app.use(cors({
-  origin: "http://localhost:5173", 
+  origin: "http://localhost:5173" || 'https://uhi-web-application-git-main-ajay-vermas-projects-6097ef04.vercel.app', 
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"]
 }));
