@@ -10,7 +10,7 @@ import fs from "fs";
 
 const app = express();
 app.use(cors({
-  origin: 'https://uhi-web-application-3nj0u7coc-ajay-vermas-projects-6097ef04.vercel.app', 
+  origin: 'https://uhi-web-application-5vby2ncfa-ajay-vermas-projects-6097ef04.vercel.app', 
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"]
 }));
@@ -25,7 +25,7 @@ app.get('/health', (req, res)=> {
 })
 app.use('/auth', authenticateRoute);
 app.use("/process", prcessRoute);
-app.use('download', reportRoute);
+app.use('/download', reportRoute);
 
 async function initializeEE() {
   try {
