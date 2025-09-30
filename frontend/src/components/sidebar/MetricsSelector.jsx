@@ -61,7 +61,6 @@ const MetricsSelector = ({ selectedMetrics, onChange }) => {
               />
               <div className="metric-info">
                 <h4>
-                  <span className="metric-icon">{metric.icon}</span>
                   {metric.name}
                 </h4>
                 <p>{metric.description}</p>

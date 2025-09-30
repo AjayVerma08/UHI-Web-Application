@@ -73,8 +73,8 @@ const AnalysisPanel = ({
                   onChange={() => handleAdditionalOptionToggle('LULC')}
                 />
                 <div className="option-info">
-                  <span className="option-icon">👥</span>
-                  <span className="option-label">Overlay Land Use Land Cover</span>
+                  <h4>LULC</h4>
+                  <p>(Overlay land use land cover data)</p>
                 </div>
               </label>
             </div>
@@ -86,14 +86,21 @@ const AnalysisPanel = ({
                   onChange={() => handleAdditionalOptionToggle('heatVulnerabilityZones')}
                 />
                 <div className="option-info">
-                  <span className="option-icon">🌡️</span>
-                  <span className="option-label">Heat Vulnerability Zones</span>
+                  <h4>Heat Vulnerability Zones</h4>
+                  <p>(Overlay zones which are more vulnerable to the UHI effect)</p>
                 </div>
               </label>
             </div>
           </div>
-        </div>
+          <div className="metrics-info">
+            <p className="info-text">
+              Select any additional analysis layer you want to generate.
+            </p>
+          </div>
+        </div>  
       )}
+
+      
 
       {/* Analysis Button */}
       <div className="analysis-section">
