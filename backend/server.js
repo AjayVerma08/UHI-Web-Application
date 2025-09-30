@@ -62,13 +62,27 @@ async function initializeEE() {
 
 async function startServer() {
     try {
+        console.log('🔧 Initializing Earth Engine...');
         await initializeEE();
-        app.listen(port, () => {
-            console.log(`🚀 Server running on http://localhost:${port}`);
-        })
+        console.log('✅ Earth Engine ready');
+        
+        const server = app.listen(port, '0.0.0.0', () => {
+            console.log(`🚀 Server running on port ${port}`);
+            console.log(`🌍 Environment: ${process.env.NODE_ENV}`);
+        });
+
+        server.on('error', (error) => {
+            console.error('❌ Server error:', error);
+            process.exit(1);
+        });
+
     } catch (error) {
-        console.error('Failed to start server:', error);
-        process.exit(1);
+        console.error('❌ Failed to start server:', error);
+        console.error('Stack trace:', error.stack);
+        // Don't exit - start server anyway for health checks
+        const server = app.listen(port, '0.0.0.0', () => {
+            console.log(`⚠️  Server running on port ${port} (without Earth Engine)`);
+        });
     }
 }
 
