@@ -20,6 +20,9 @@ const private_key = process.env.GEE_PRIVATE_KEY;
 let projectId = process.env.PROJECT_ID;
 
 app.use(express.json());
+app.get('/health', (req, res)=> {
+    res.status(200).send('ok');
+})
 app.use('/auth', authenticateRoute);
 app.use("/process", prcessRoute);
 app.use('download', reportRoute);
