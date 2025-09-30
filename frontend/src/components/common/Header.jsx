@@ -17,7 +17,7 @@ const Header = ({ onAuthClick, showAuthButton = false, user = null, onLogout }) 
   };
 
   const handleGithubClick = () => {
-    window.open('https://github.com/your-username/city-heat-atlas', '_blank');
+    window.open('https://github.com/AjayVerma08/UHI-Web-Application');
   };
 
   return (
