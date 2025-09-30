@@ -110,13 +110,13 @@ const MapContainer = ({ onRegionSelect, mapLayers, analysisResults }) => {
       osmLayer.addTo(map);
       tileLayersRef.current.openStreetMap = osmLayer;
 
-      const nightTime = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
+      const nightTime = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png?api_key=94f68b97-9a81-4a1d-bd4b-e33fd147cba9', {
         attribution: '© Stadia Maps, © OpenMapTiles © OpenStreetMap contributors',
         opacity: 1
       });
       tileLayersRef.current.nightTime = nightTime;
 
-      const satellite = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_satellite/{z}/{x}/{y}{r}.{ext}', {
+      const satellite = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_satellite/{z}/{x}/{y}{r}.{ext}?api_key=94f68b97-9a81-4a1d-bd4b-e33fd147cba9', {
         attribution: '&copy; CNES, Distribution Airbus DS, © Airbus DS, © PlanetObserver (Contains Copernicus Data) | &copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a>',
         ext: 'jpg',
         opacity: 1
