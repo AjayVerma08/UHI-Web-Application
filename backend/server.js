@@ -29,7 +29,9 @@ app.use('download', reportRoute);
 
 async function initializeEE() {
   try {
-    const serviceAccountKey = JSON.parse(fs.readFileSync(private_key, "utf8"));
+    const serviceAccountKey = process.env.GEE_SERVICE_ACCOUNT_KEY 
+    ? JSON.parse(process.env.GEE_SERVICE_ACCOUNT_KEY)
+    : JSON.parse(fs.readFileSync(private_key, "utf8"));
     projectId = serviceAccountKey.project_id;
 
     await new Promise((resolve, reject) => {
