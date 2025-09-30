@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Landing from './pages/Landing';
 import Explorer from './pages/Explorer';
-import NotFound from './pages/NotFound';
+import NotFound from './pages/Notfound';
 import './styles/global.css';
 
 function App() {
